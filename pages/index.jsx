@@ -60,15 +60,15 @@ export default function Home() {
       <h1 className="mt-11 transition-all text-8xl font-bold" id="mainHeader">
         Hello!
       </h1>
-      <h1 className="mt-3 transition-all text-4xl font-bold">I'm RFL890.</h1>
+      <h1 className="mt-3 transition-all text-4xl font-bold">I&apos;m RFL890.</h1>
       <p className="text-3xl mt-11">
-        I'm a developer. I wouldn't really call myself front-end or back-end,
-        since I'm alright-ish at both. I know Node.js, Lua, Python and
+        I'm a developer. I wouldn&apos;t really call myself front-end or back-end,
+        since I&apos;m alright-ish at both. I know Node.js, Lua, Python and
         HTML/CSS/JS. I am attempting to learn C++, C# and Java.
         <br></br>
         <br></br>
         As for hobbies, I like cooking, reading and playing tennis. I also like
-        playing Minecraft, as I think it's an original, fun game.
+        playing Minecraft, as I think it&apos;s an original, fun game.
       </p>
       <h1 className="mt-6 transition-all text-6xl font-bold">My projects</h1>
       <p className="text-3xl mt-11">
@@ -76,12 +76,12 @@ export default function Home() {
         and some utilities.
       </p>
       <h1 className="mt-6 transition-all text-6xl font-bold">Social stuff</h1>
-      <div class="flex">
+      <div className="flex">
         <button
           className="flex-none bg-zinc-800 text-white text-4xl rounded-lg shadow-2xl mt-4 box-border h-16 w-16 transition-colors"
           onClick={openLinkGitHub}
         >
-          <i class="bi bi-github"></i>
+          <i className="bi bi-github"></i>
         </button>
         <button
           className="flex-initial ml-2 bg-zinc-800 text-white text-4xl rounded-lg shadow-2xl mt-4 box-border h-16 w-16 transition-colors"
@@ -94,7 +94,7 @@ export default function Home() {
           className="flex-initial ml-2 bg-zinc-800 text-white text-4xl rounded-lg shadow-2xl mt-4 box-border h-16 w-16 transition-colors"
           onClick={copyDiscord}
         >
-          <i class="bi bi-discord"></i>
+          <i className="bi bi-discord"></i>
         </button>
         </Tippy>
       </div>
