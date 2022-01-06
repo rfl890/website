@@ -62,7 +62,7 @@ export default function Home() {
       </h1>
       <h1 className="mt-3 transition-all text-4xl font-bold">I&apos;m RFL890.</h1>
       <p className="text-3xl mt-11">
-        I&nbsp;m a developer. I wouldn&apos;t really call myself front-end or back-end,
+        I&apos;m a developer. I wouldn&apos;t really call myself front-end or back-end,
         since I&apos;m alright-ish at both. I know Node.js, Lua, Python and
         HTML/CSS/JS. I am attempting to learn C++, C# and Java.
         <br></br>
