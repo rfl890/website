@@ -101,7 +101,7 @@ export default function Home() {
       <Script src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.js"></Script>
       <Script
         type="module"
-        src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicon.esm.js"
+        src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.esm.js"
       ></Script>
     </div>
   );
