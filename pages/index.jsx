@@ -68,7 +68,7 @@ export default function Home() {
       </p>
       <h1 className="mt-6 transition-all text-6xl font-bold">My projects</h1>
       <p className="text-xl mt-5">
-        I have some file storage that serves as both a CDN to host JS, CSS etc and file storage. Check it out <a href="https://cdn.rfl890.cf" class="text-blue-400" target="_blank" rel="noreferrer">here</a>. That's really it, but my GitHub page has random stuff
+        I have some file storage that serves as both a CDN to host JS, CSS etc and file storage. Check it out <a href="https://cdn.rfl890.cf" class="text-blue-400" target="_blank" rel="noreferrer">here</a>. That&apos;s really it, but my GitHub page has random stuff
         and some utilities. I also published a couple npm packages.
       </p>
       <h1 className="mt-6 transition-all text-6xl font-bold">Social stuff</h1>
