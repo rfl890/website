@@ -8,7 +8,7 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
 export default function Home() {
-  const [visible, setVisible] = useState(false);
+  let [visible, setVisible] = useState(false);
   const show = () => setVisible(true);
   const hide = () => setVisible(false);
   function openLinkGitHub() {
@@ -44,24 +44,20 @@ export default function Home() {
       <Head>
         <title>RFL890</title>
         <meta name="viewport" content="width=device-width"></meta>
-        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link
           rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin
+          href="https://cdn.rfl890.cf"
         ></link>
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Mono&display=swap"
+          href="https://cdn.rfl890.cf/inter/3.19/inter.min.css"
           rel="stylesheet"
         ></link>
       </Head>
-      <p className="mb-11">&nbsp;</p>
-      <p className="mb-11">&nbsp;</p>
       <h1 className="mt-11 transition-all text-8xl font-bold" id="mainHeader">
         Hello!
       </h1>
       <h1 className="mt-3 transition-all text-4xl font-bold">I&apos;m RFL890.</h1>
-      <p className="text-3xl mt-11">
+      <p className="text-xl mt-5">
         I&apos;m a developer. I wouldn&apos;t really call myself front-end or back-end,
         since I&apos;m alright-ish at both. I know Node.js, Lua, Python and
         HTML/CSS/JS. I am attempting to learn C++, C# and Java.
@@ -71,9 +67,9 @@ export default function Home() {
         playing Minecraft, as I think it&apos;s an original, fun game.
       </p>
       <h1 className="mt-6 transition-all text-6xl font-bold">My projects</h1>
-      <p className="text-3xl mt-11">
-        At the moment I have no public projects. My GitHub page has random stuff
-        and some utilities.
+      <p className="text-xl mt-5">
+        I have some file storage that serves as both a CDN to host JS, CSS etc and file storage. Check it out <a href="https://cdn.rfl890.cf" class="text-blue-400" target="_blank" rel="noreferrer">here</a>. That's really it, but my GitHub page has random stuff
+        and some utilities. I also published a couple npm packages.
       </p>
       <h1 className="mt-6 transition-all text-6xl font-bold">Social stuff</h1>
       <div className="flex">
