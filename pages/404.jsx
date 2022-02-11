@@ -17,7 +17,7 @@ export default function Home() {
         Page not found.
       </h1>
 	  <h1 className="text-center mt-4 text-xl" id="mainHeader">
-        Head back <Link href='/'><span className="text-green-300 
+        Head back <Link href='/' passHref><span className="text-green-300 
  cursor-pointer">home</span></Link>?
       </h1>
     </div>
