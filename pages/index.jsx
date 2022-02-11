@@ -56,7 +56,7 @@ export default function Home() {
         HTML/CSS/JS. I am attempting to learn C++, C# and Java.
         <br></br>
         <br></br>
-		I've been playing Minecraft since 2014. I think it's awesome.
+		I&apos;ve been playing Minecraft since 2014. I think it&apos;s awesome.
 	  </p>
       <h1 className="mt-6 text-6xl font-bold">My projects</h1>
       <p className="text-lg mt-5">
