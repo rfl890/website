@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from 'next/link'
 import React, { useState } from "react";
 import "inter-ui/inter.css";
 
@@ -16,7 +17,8 @@ export default function Home() {
         Page not found.
       </h1>
 	  <h1 className="text-center mt-4 text-xl" id="mainHeader">
-        Head back <a href='/' className="text-green-300">home</a>?
+        Head back <Link href='/'><span className="text-green-300 
+ cursor-pointer">home</span></Link>?
       </h1>
     </div>
   );
