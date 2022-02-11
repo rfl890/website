@@ -1,12 +1,10 @@
 import Head from "next/head";
 import Script from "next/script";
-import React, {useState} from "react";
-import ButtonPrimaryOutline from "../components/ButtonPrimaryOutline";
+import React, { useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { createPopper } from '@popperjs/core';
-import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css';
-import 'inter-ui/inter.css'
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
+import "inter-ui/inter.css";
 
 export default function Home() {
   let [visible, setVisible] = useState(false);
@@ -33,57 +31,74 @@ export default function Home() {
   function copyDiscord() {
     navigator.clipboard.writeText("RightBehindYou#7522");
     if (visible) {
-      hide()
-      visible = false
+      hide();
+      visible = false;
     } else {
       show();
-      visible = true
+      visible = true;
     }
-  }  
+  }
   return (
-    <div className="container px-11 py-3">
+    <div className="container px-11 py-3 text-white">
       <Head>
         <title>RFL890</title>
         <meta name="viewport" content="width=device-width"></meta>
       </Head>
-      <h1 className="mt-11 text-8xl font-bold" id="mainHeader">
+      <h1 className="mt-5 text-8xl font-bold" id="mainHeader">
         Hello!
       </h1>
       <h1 className="mt-3  text-4xl font-bold">I&apos;m RFL890.</h1>
       <p className="text-lg mt-5">
-        I&apos;m a developer. I wouldn&apos;t really call myself front-end or back-end,
-        since I&apos;m alright-ish at both. I know Node.js, Lua, Python and
-        HTML/CSS/JS. I am attempting to learn C++, C# and Java.
+        I&apos;m a developer. I wouldn&apos;t really call myself front-end or
+        back-end, since I&apos;m alright-ish at both. I know Node.js, Lua,
+        Python and HTML/CSS/JS. I am attempting to learn C++, C# and Java.
         <br></br>
         <br></br>
-		I&apos;ve been playing Minecraft since 2014. I think it&apos;s awesome.
-	  </p>
+        I&apos;ve been playing Minecraft since 2014. I think it&apos;s awesome.
+      </p>
       <h1 className="mt-6 text-6xl font-bold">My projects</h1>
       <p className="text-lg mt-5">
-        I have some file storage that serves as both a CDN to host JS, CSS etc and file storage. Check it out <a href="https://cdn.rfl890.cf" className="text-blue-400" target="_blank" rel="noreferrer">here</a>. That&apos;s really it, but my GitHub page has random stuff
-        and some utilities. I also published a couple npm packages.
+        I have some file storage that serves as both a CDN to host JS, CSS etc
+        and file storage. Check it out{" "}
+        <a
+          href="https://cdn.rfl890.cf"
+          className="text-blue-400"
+          target="_blank"
+          rel="noreferrer"
+        >
+          here
+        </a>
+        . That&apos;s really it, but my GitHub page has random stuff and some
+        utilities. I also published a couple npm packages.
       </p>
       <h1 className="mt-6 text-6xl font-bold">Social stuff</h1>
       <div className="flex">
         <button
-          className="flex-none bg-zinc-800 text-white text-4xl rounded-lg shadow-2xl mt-4 box-border h-16 w-16 transition-colors"
+          className="flex-none bg-zinc-700 text-white text-4xl rounded-lg shadow-2xl mt-4 box-border h-16 w-16 transition-all hover:bg-zinc-300 hover:text-zinc-700"
           onClick={openLinkGitHub}
         >
           <i className="bi bi-github"></i>
         </button>
         <button
-          className="flex-initial ml-2 bg-zinc-800 text-white text-4xl rounded-lg shadow-2xl mt-4 box-border h-16 w-16 transition-colors"
+          className="flex-initial ml-2 bg-zinc-700 text-white text-4xl rounded-lg shadow-2xl mt-4 box-border h-16 w-16 transition-all hover:bg-zinc-300 hover:text-zinc-700"
           onClick={openLinkReplit}
         >
-          <ion-icon src="/img/replit.svg" style={{verticalAlign: -.125 + 'em'}}></ion-icon>
+          <ion-icon
+            src="/img/replit.svg"
+            style={{ verticalAlign: -0.125 + "em" }}
+          ></ion-icon>
         </button>
-        <Tippy content="Copied to clipboard! If it didn't copy, it's RightBehindYou#7522" visible={visible} onClickOutside={hide}>
-        <button
-          className="flex-initial ml-2 bg-zinc-800 text-white text-4xl rounded-lg shadow-2xl mt-4 box-border h-16 w-16 transition-colors"
-          onClick={copyDiscord}
+        <Tippy
+          content="Copied to clipboard! If it didn't copy, it's RightBehindYou#7522"
+          visible={visible}
+          onClickOutside={hide}
         >
-          <i className="bi bi-discord"></i>
-        </button>
+          <button
+            className="flex-initial ml-2 bg-zinc-700 text-white text-4xl rounded-lg shadow-2xl mt-4 box-border h-16 w-16 transition-all hover:bg-zinc-300 hover:text-zinc-700"
+            onClick={copyDiscord}
+          >
+            <i className="bi bi-discord"></i>
+          </button>
         </Tippy>
       </div>
       <Script src="https://cdn.jsdelivr.net/npm/ionicons@6/dist/ionicons/ionicons.js"></Script>
