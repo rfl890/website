@@ -43,6 +43,7 @@ export default function Home() {
       <Head>
         <title>RFL890</title>
         <meta name="viewport" content="width=device-width"></meta>
+        <link rel="preload" href="https://www.rfl890.cf/img/replit.svg" as="image" type="image/svg+xml"></link>
       </Head>
       <h1 className="mt-5 text-8xl font-bold" id="mainHeader">
         Hello!
