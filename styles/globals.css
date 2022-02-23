@@ -21,3 +21,11 @@ body {
 	fill: white;
 	padding: 20%;
 }
+.jsx-4131126525new {
+	padding: 20%;
+	fill: rgb(63,63,70)
+}
+::selection {
+	color: black;
+	background-color: rgb(203, 213, 225);
+}
