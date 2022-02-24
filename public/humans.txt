@@ -1,0 +1,16 @@
+/* TEAM */
+   Creator, Developer, UI Design, Frontend: rfl890
+      Twitter: @rfl890
+
+/* THANKS */
+   Rasmus Andersson - Created the amazing Inter font I use on the website
+      Twitter: @rsms
+      GitHub: rsms
+      Website: https://rsms.me
+   
+/* SITE */
+   Last update: 2022/02/23
+   Language: English
+   Standards: HTML5, CSS3,..
+   Components: Tippy.js, tailwind.css                        
+   Software: Next.js

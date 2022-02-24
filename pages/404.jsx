@@ -8,6 +8,7 @@ export default function Home() {
     <div className="container text-white">
       <Head>
         <title>404: Page not found</title>
+        <link type="text/plain" rel="author" href="/humans.txt"></link>
         <meta name="viewport" content="width=device-width"></meta>
       </Head>
 	  <h1 className="text-center mt-5 text-7xl font-bold" id="mainHeader">

@@ -56,6 +56,7 @@ export default function Home() {
     <div className="container px-11 py-3 text-white">
       <Head>
         <title>RFL890</title>
+        <link type="text/plain" rel="author" href="/humans.txt"></link>
         <meta name="viewport" content="width=device-width"></meta>
       </Head>
       <h1 className="mt-5 text-8xl font-bold" id="mainHeader">
