@@ -9,21 +9,13 @@ body {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
 }
-.bi-replit::before {
-  display: inline-block;
-  content: "";
-  vertical-align: -.125em;
-  background-image: url("/img/replit.svg");
-  background-repeat: no-repeat;
-  background-size: 1rem 1rem;
+.icon-replit {
+  padding: 13%;
+  filter: invert(88%) sepia(100%) saturate(0%) hue-rotate(324deg) brightness(104%) contrast(102%);
 }
-.replit-icon {
-	fill: white;
-	padding: 20%;
-}
-.replit-icon-hovered {
-	padding: 20%;
-	fill: rgb(63,63,70)
+.icon-replit-hover {
+	padding: 13%;
+	filter: invert(24%) sepia(6%) saturate(640%) hue-rotate(202deg) brightness(95%) contrast(94%);
 }
 ::selection {
 	color: black;

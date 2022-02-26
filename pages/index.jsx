@@ -10,52 +10,61 @@ export default function Home() {
   let [visible, setVisible] = useState(false);
   const show = () => setVisible(true);
   const hide = () => setVisible(false);
-  function openLinkGitHub() {
+  const openLink = (link) => {
     let element = document.createElement("a");
-    element.setAttribute("href", "https://github.com/rfl890");
+    element.setAttribute("href", link);
     element.setAttribute("target", "_blank");
     element.setAttribute("rel", "noreferrer");
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
   }
-  function openLinkReplit() {
-    let element = document.createElement("a");
-    element.setAttribute("href", "https://replit.com/@RFL890");
-    element.setAttribute("target", "_blank");
-    element.setAttribute("rel", "noreferrer");
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text);
   }
-  function copyDiscord() {
-    navigator.clipboard.writeText("RightBehindYou#7522");
-    if (visible) {
-      hide();
-      visible = false;
-    } else {
-      show();
-      visible = true;
+  const handleClickButton = (e) => {
+    const button = e.target;
+    switch (button.getAttribute("id")) {
+      case 'gh_button':
+      case 'gh_button_icon':
+        openLink("https://github.com/rfl890")
+        break;
+      case 'replit_button':
+      case 'replit-icon-1':
+        openLink("https://replit.com/@RFL890");
+        break;
+      case 'discord_button':
+      case 'discord_button_icon':
+        copyToClipboard("RightBehindYou#7522");
+        if (visible) {
+          hide();
+          visible = false;
+        } else {
+          show();
+          visible = true;
+        }
+        break;
     }
   }
-  function hoverOnRepl() {
-    let elems = document.getElementsByClassName("replit-icon");
+  const hoverOnRepl = async () => {
+    let elems = document.getElementsByClassName("icon-replit");
     Array.from(elems).forEach((elem) => {
-      elem.classList.remove("replit-icon");
-      elem.classList.add("replit-icon-hovered");
+      elem.classList.remove("icon-replit");
+      elem.classList.add("icon-replit-hover");
     });
   }
-  function hoverOffRepl() {
-    let elems = document.getElementsByClassName("replit-icon-hovered");
+  const hoverOffRepl = async () => {
+    let elems = document.getElementsByClassName("icon-replit-hover");
     Array.from(elems).forEach((elem) => {
-      elem.classList.remove("replit-icon-hovered");
-      elem.classList.add("replit-icon");
+      elem.classList.remove("icon-replit-hover");
+      elem.classList.add("icon-replit");
     });
   }
   return (
     <div className="container px-11 py-3 text-white">
       <Head>
         <title>RFL890</title>
+        <link rel="preload" href="/replit.svg" as="image" type="image/svg+xml"></link>
         <link type="text/plain" rel="author" href="/humans.txt"></link>
         <meta name="viewport" content="width=device-width"></meta>
       </Head>
@@ -89,24 +98,20 @@ export default function Home() {
       <h1 className="mt-6 text-6xl font-bold">Social stuff</h1>
       <div className="flex">
         <button
-          className="flex-none bg-zinc-700 text-white text-4xl rounded-lg shadow-2xl mt-4 box-border h-16 w-16 transition-all hover:bg-zinc-300 hover:text-zinc-700"
-          onClick={openLinkGitHub}
+          className="flex-initial bg-zinc-700 text-white text-4xl rounded-lg shadow-2xl mt-4 box-border h-16 w-16 transition-all hover:bg-zinc-300 hover:text-zinc-700"
+          onClick={handleClickButton}
+          id="gh_button"
         >
-          <i className="bi bi-github"></i>
+          <i className="bi bi-github" id="gh_button_icon"></i>
         </button>
         <button
           className="flex-initial ml-2 bg-zinc-700 text-white text-4xl rounded-lg shadow-2xl mt-4 box-border h-16 w-16 transition-all hover:bg-zinc-300 hover:text-zinc-700"
-          onClick={openLinkReplit}
+          onClick={handleClickButton}
           onMouseEnter={hoverOnRepl}
           onMouseLeave={hoverOffRepl}
+          id="replit_button"
         >
-          <svg viewBox="0 0 100 100" id="lolololol2" className="replit-icon">
-            <path d="M98.849 45.191zM26.042 44.932S12.394 95.218 67.097 95.656c17.163-6.39 29.81-22.054 31.727-40.939.132-1.306.171-2.639.2-3.973.006-.352.053-.693.053-1.046 0-1.521-.093-3.02-.227-4.507-14.452 56.894-78.388 34.61-72.808-.259z"></path>
-            <path d="M54.326 26.267S3.395 12.044 4.178 67.58a49.217 49.217 0 0011.87 17.742c.218.207.444.403.665.606a49.233 49.233 0 004.654 3.793c.253.18.49.38.744.556a48.884 48.884 0 005.373 3.19c.54.278 1.094.532 1.641.791a48.592 48.592 0 004.907 1.991c.41.14.802.315 1.218.446a48.66 48.66 0 006.108 1.444c.624.11 1.256.201 1.888.288 2.142.31 4.302.478 6.467.503.083 0 .163.013.246.013 1.632 0 3.244-.088 4.833-.244-57.146-13.628-35.425-77.529-.466-72.43z"></path>
-            <path d="M74.178 52.604s12.05-50.8-42.19-48.532C13.8 11.257.924 28.954.924 49.694c.017 2.233.185 4.463.504 6.673 11.415-57.474 76.448-38.86 72.75-3.763z"></path>
-            <path d="M48.135 74.465s51.02 6.66 47.827-41.848c-6.944-18.672-24.873-32-45.961-32a49.258 49.258 0 00-8.9.846c56.85 6.979 42.074 73.498 7.034 73.002z"></path>
-            <path d="M64.163 49.7a13.746 13.746 0 11-27.493-.001 13.746 13.746 0 0127.493 0z"></path>
-          </svg>
+          <img src="/replit.svg" id="replit-icon-1" className="icon-replit"></img>
         </button>
         <Tippy
           content="Copied to clipboard! If it didn't copy, it's RightBehindYou#7522"
@@ -115,9 +120,10 @@ export default function Home() {
         >
           <button
             className="flex-initial ml-2 bg-zinc-700 text-white text-4xl rounded-lg shadow-2xl mt-4 box-border h-16 w-16 transition-all hover:bg-zinc-300 hover:text-zinc-700"
-            onClick={copyDiscord}
+            onClick={handleClickButton}
+            id="discord_button"
           >
-            <i className="bi bi-discord"></i>
+            <i className="bi bi-discord" id="discord_button_icon"></i>
           </button>
         </Tippy>
       </div>
